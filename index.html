@@ -3,104 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Apps - Privacy Policies</title>
+  <title>My Apps - Privacy & Policies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: linear-gradient(135deg, #eef2ff, #f8fafc);
-      color: #1a1a1a;
+      color: #111827;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 60px auto;
       padding: 20px;
     }
 
-    h1 {
+    .hero {
       text-align: center;
-      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
       margin-bottom: 10px;
     }
 
-    p.subtitle {
-      text-align: center;
-      color: #666;
-      margin-bottom: 40px;
+    .hero p {
+      color: #6b7280;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 6px 12px;
+      background: #e0e7ff;
+      color: #4338ca;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      padding: 24px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
     }
 
     .app-name {
       font-size: 20px;
-      margin-bottom: 10px;
       font-weight: 600;
+      margin-bottom: 8px;
     }
 
     .desc {
       font-size: 14px;
-      color: #555;
-      margin-bottom: 15px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 10px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 10px 14px;
+      flex: 1;
+      text-align: center;
+      padding: 10px;
       border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .primary {
       background: #4f46e5;
       color: white;
-      text-decoration: none;
+    }
+
+    .secondary {
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    .section {
+      margin-top: 60px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
       font-size: 14px;
     }
 
     .footer {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 13px;
-      color: #888;
+      color: #9ca3af;
     }
+
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>My Apps</h1>
-    <p class="subtitle">Privacy Policies & App Information</p>
+
+    <div class="hero">
+      <h1>My Mobile Apps</h1>
+      <p>
+        Explore my applications and view their official privacy policies. 
+        I value transparency and ensure your data stays secure and under your control.
+      </p>
+      <div class="badge">Privacy First • No Hidden Tracking</div>
+    </div>
 
     <div class="grid">
 
       <div class="card">
-        <div class="app-name">BaZi Fortune</div>
-        <div class="desc">Daily BaZi insights and personal destiny analysis.</div>
-        <a class="btn" href="bazi-daily.html">View Privacy Policy</a>
+        <div class="app-name">BaZi Forturne</div>
+        <div class="desc">Daily BaZi insights, destiny reading, and personalized life guidance.</div>
+        <div class="actions">
+          <a class="btn primary" href="bazi-fortune.html">Privacy Policy</a>
+          <a class="btn secondary" href="#">Play Store</a>
+        </div>
       </div>
 
+      <div class="card">
+        <div class="app-name">Malaysia Holiday Planner</div>
+        <div class="desc">Smart leave planning with public holidays and long weekend optimization.</div>
+        <div class="actions">
+          <a class="btn primary" href="holiday-planner.html">Privacy Policy</a>
+          <a class="btn secondary" href="#">Play Store</a>
+        </div>
+      </div>
 
+    </div>
 
-      <!-- Add more apps below -->
+    <div class="section">
+      <h2>Our Commitment</h2>
+      <p>
+        All apps are designed with a privacy-first approach. Your personal data remains on your device unless explicitly stated. 
+        We do not sell or share your personal information.
+      </p>
+    </div>
 
+    <div class="section">
+      <h2>Contact</h2>
+      <p>
+        For any questions regarding privacy or data usage, feel free to reach out:
+        <br><br>
+        <strong>Email:</strong> kuanmeng.see@gmail.com
+      </p>
     </div>
 
     <div class="footer">
-      © 2026 Your Apps. All rights reserved.
+      © 2026 My Apps. Built with transparency and trust.
     </div>
+
   </div>
 </body>
 </html>
