@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Geografi · SKM Studio</title>
+<meta name="description" content="Privacy policy for Geografi, an offline Geography study app by Kuan Meng See / SKM Studio. No personal information is collected.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F2233;
+    --ink-soft:#42586A;
+    --paper:#F4F6F1;
+    --paper-deep:#E9EEE5;
+    --contour:#BCCBB8;
+    --rule:#D6DED2;
+    --water:#2F6E8F;
+    --marker:#C9931A;
+    --measure:38rem;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--water);text-underline-offset:3px;text-decoration-thickness:1px;}
+  a:hover{color:var(--ink);}
+
+  :focus-visible{
+    outline:2px solid var(--marker);
+    outline-offset:3px;
+  }
+
+  .wrap{
+    max-width:64rem;
+    margin:0 auto;
+    padding:0 1.5rem;
+  }
+
+  /* ---------- language switch ---------- */
+  .lang{
+    position:sticky;
+    top:0;
+    z-index:10;
+    display:flex;
+    justify-content:flex-end;
+    gap:.25rem;
+    padding:.75rem 0;
+    background:linear-gradient(var(--paper) 65%,transparent);
+  }
+  .lang button{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:.4rem .7rem;
+    border:1px solid var(--rule);
+    background:transparent;
+    color:var(--ink-soft);
+    border-radius:2px;
+    cursor:pointer;
+  }
+  .lang button[aria-pressed="true"]{
+    background:var(--ink);
+    border-color:var(--ink);
+    color:var(--paper);
+  }
+
+  /* ---------- hero: survey sheet ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--ink);
+    background:
+      repeating-radial-gradient(circle at 12% 118%,
+        transparent 0 21px, var(--contour) 21px 22px),
+      repeating-radial-gradient(circle at 88% -20%,
+        transparent 0 27px, var(--contour) 27px 28px),
+      var(--paper-deep);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+      repeating-linear-gradient(to right, rgba(15,34,51,.07) 0 1px, transparent 1px 84px),
+      repeating-linear-gradient(to bottom, rgba(15,34,51,.07) 0 1px, transparent 1px 84px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    padding:4.5rem 0 3rem;
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.74rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:0 0 1.2rem;
+  }
+  h1{
+    font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;
+    font-weight:800;
+    font-size:clamp(2.6rem,9vw,5rem);
+    line-height:.94;
+    letter-spacing:-.03em;
+    margin:0 0 1.5rem;
+    max-width:14ch;
+  }
+  .lede{
+    max-width:var(--measure);
+    font-size:1.12rem;
+    color:var(--ink-soft);
+    margin:0 0 2.5rem;
+  }
+
+  /* the signature: a map legend stating the whole policy in one line */
+  .legend-key{
+    display:inline-flex;
+    align-items:center;
+    gap:.9rem;
+    background:var(--paper);
+    border:1px solid var(--ink);
+    border-left:5px solid var(--marker);
+    padding:.85rem 1.2rem;
+    max-width:100%;
+  }
+  .legend-key svg{flex:none;}
+  .legend-key span{
+    font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;
+    font-weight:700;
+    font-size:1.02rem;
+    letter-spacing:-.01em;
+  }
+
+  .sheet-meta{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0;
+    border-top:1px solid var(--ink);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.76rem;
+    letter-spacing:.06em;
+    background:var(--paper);
+  }
+  .sheet-meta div{
+    flex:1 1 12rem;
+    padding:.85rem 1.1rem;
+    border-right:1px solid var(--rule);
+  }
+  .sheet-meta div:last-child{border-right:0;}
+  .sheet-meta dt{
+    display:block;
+    text-transform:uppercase;
+    font-size:.66rem;
+    color:var(--ink-soft);
+    letter-spacing:.16em;
+    margin-bottom:.3rem;
+  }
+  .sheet-meta dd{margin:0;color:var(--ink);}
+
+  /* ---------- at a glance ---------- */
+  .glance{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin:3.5rem 0 4.5rem;
+  }
+  .glance article{
+    background:var(--paper);
+    padding:1.6rem 1.4rem;
+  }
+  .glance h3{
+    font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;
+    font-size:1.05rem;
+    font-weight:700;
+    margin:.9rem 0 .5rem;
+    letter-spacing:-.01em;
+  }
+  .glance p{margin:0;font-size:.95rem;color:var(--ink-soft);}
+
+  /* ---------- policy body ---------- */
+  .clause{
+    display:grid;
+    grid-template-columns:5rem 1fr;
+    gap:1.5rem;
+    padding:2.2rem 0;
+    border-top:1px solid var(--rule);
+    max-width:52rem;
+  }
+  .clause:first-of-type{border-top:1px solid var(--ink);}
+  .symbol{
+    padding-top:.35rem;
+  }
+  .clause h2{
+    font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;
+    font-size:1.35rem;
+    font-weight:700;
+    letter-spacing:-.02em;
+    margin:0 0 .7rem;
+  }
+  .clause p{
+    margin:0 0 .8rem;
+    max-width:var(--measure);
+  }
+  .clause p:last-child{margin-bottom:0;}
+  .clause ul{
+    margin:0;
+    padding-left:1.1rem;
+    max-width:var(--measure);
+    color:var(--ink-soft);
+  }
+  .clause li{margin-bottom:.35rem;}
+
+  /* ---------- contact ---------- */
+  .contact{
+    margin:4rem 0 0;
+    border:1px solid var(--ink);
+    background:var(--paper-deep);
+    padding:2.2rem 1.8rem;
+    max-width:52rem;
+  }
+  .contact h2{
+    font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;
+    font-size:1.35rem;
+    margin:0 0 .6rem;
+    letter-spacing:-.02em;
+  }
+  .contact p{margin:0 0 1.1rem;color:var(--ink-soft);max-width:var(--measure);}
+  .contact a.mail{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:1.02rem;
+    font-weight:500;
+    word-break:break-all;
+  }
+
+  footer{
+    margin-top:3rem;
+    padding:1.6rem 0 3.5rem;
+    border-top:1px solid var(--rule);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:.74rem;
+    letter-spacing:.08em;
+    color:var(--ink-soft);
+    display:flex;
+    flex-wrap:wrap;
+    gap:.4rem 1.4rem;
+  }
+
+  @media (max-width:640px){
+    body{font-size:16px;}
+    .hero-inner{padding:3rem 0 2.2rem;}
+    .clause{grid-template-columns:1fr;gap:.6rem;}
+    .symbol{padding-top:0;}
+  }
+
+  @media (prefers-reduced-motion:no-preference){
+    .hero-inner > *{animation:rise .7s cubic-bezier(.2,.7,.3,1) backwards;}
+    .hero-inner > *:nth-child(2){animation-delay:.06s;}
+    .hero-inner > *:nth-child(3){animation-delay:.12s;}
+    .hero-inner > *:nth-child(4){animation-delay:.18s;}
+    @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  }
+
+  @media print{
+    .lang{display:none;}
+    body{background:#fff;}
+    .hero{background:#fff;}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="lang" aria-label="Language">
+    <button type="button" data-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-lang="ms" aria-pressed="false">BM</button>
+  </nav>
+</div>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow" data-en="Geografi — Study app · SKM Studio" data-ms="Geografi — Aplikasi pembelajaran · SKM Studio">Geografi — Study app · SKM Studio</p>
+    <h1 data-en="Privacy Policy" data-ms="Dasar Privasi">Privacy Policy</h1>
+    <p class="lede" data-en="Geografi is a Geography study app for school students. It runs entirely on your device. It does not collect, store, or send any personal information." data-ms="Geografi ialah aplikasi pembelajaran mata pelajaran Geografi untuk murid sekolah. Ia berjalan sepenuhnya dalam peranti anda. Ia tidak mengumpul, menyimpan, atau menghantar sebarang maklumat peribadi.">Geografi is a Geography study app for school students. It runs entirely on your device. It does not collect, store, or send any personal information.</p>
+
+    <p class="legend-key">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="17" r="15" fill="none" stroke="#BCCBB8" stroke-width="1.2"/>
+        <circle cx="17" cy="17" r="10" fill="none" stroke="#BCCBB8" stroke-width="1.2"/>
+        <circle cx="17" cy="17" r="5" fill="none" stroke="#C9931A" stroke-width="1.6"/>
+        <path d="M6 28 L28 6" stroke="#0F2233" stroke-width="1.6"/>
+      </svg>
+      <span data-en="No data leaves this device." data-ms="Tiada data keluar dari peranti ini.">No data leaves this device.</span>
+    </p>
+  </div>
+
+  <div class="wrap">
+    <dl class="sheet-meta">
+      <div>
+        <dt data-en="Developer" data-ms="Pembangun">Developer</dt>
+        <dd>Kuan Meng See / SKM Studio</dd>
+      </div>
+      <div>
+        <dt data-en="Contact" data-ms="Hubungi">Contact</dt>
+        <dd><a href="mailto:kuanmeng.see@gmail.com">kuanmeng.see@gmail.com</a></dd>
+      </div>
+      <div>
+        <dt data-en="Effective date" data-ms="Tarikh berkuat kuasa">Effective date</dt>
+        <dd data-en="26 July 2026" data-ms="26 Julai 2026">26 July 2026</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="glance" aria-label="Summary">
+    <article>
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <path d="M2 18 L8 9 L13 15 L18 5 L24 18" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M2 22 H24" stroke="#BCCBB8" stroke-width="1.6"/>
+      </svg>
+      <h3 data-en="Works offline" data-ms="Berfungsi luar talian">Works offline</h3>
+      <p data-en="Every map, note, and quiz is bundled inside the app. No internet connection is needed to use it." data-ms="Setiap peta, nota, dan kuiz disertakan di dalam aplikasi. Tiada sambungan internet diperlukan untuk menggunakannya.">Every map, note, and quiz is bundled inside the app. No internet connection is needed to use it.</p>
+    </article>
+    <article>
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <circle cx="13" cy="9" r="4.5" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M4 23 C4 17 22 17 22 23" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M4 3 L22 23" stroke="#C9931A" stroke-width="1.6"/>
+      </svg>
+      <h3 data-en="No account needed" data-ms="Tiada akaun diperlukan">No account needed</h3>
+      <p data-en="There is no sign-up, no login, and no profile. Open the app and start studying." data-ms="Tiada pendaftaran, tiada log masuk, dan tiada profil. Buka aplikasi dan terus belajar.">There is no sign-up, no login, and no profile. Open the app and start studying.</p>
+    </article>
+    <article>
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true">
+        <circle cx="11" cy="11" r="7.5" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M16.5 16.5 L24 24" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M6 16 L16 6" stroke="#C9931A" stroke-width="1.6"/>
+      </svg>
+      <h3 data-en="Nothing is tracked" data-ms="Tiada penjejakan">Nothing is tracked</h3>
+      <p data-en="No analytics, no advertising, and no third-party trackers of any kind." data-ms="Tiada analitik, tiada pengiklanan, dan tiada penjejak pihak ketiga dalam apa jua bentuk.">No analytics, no advertising, and no third-party trackers of any kind.</p>
+    </article>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <path d="M3 33 C13 27 20 37 30 30 C36 26 40 28 43 26" fill="none" stroke="#BCCBB8" stroke-width="1.3"/>
+        <path d="M3 24 C13 18 20 28 30 21 C36 17 40 19 43 17" fill="none" stroke="#BCCBB8" stroke-width="1.3"/>
+        <path d="M3 15 C13 9 20 19 30 12 C36 8 40 10 43 8" fill="none" stroke="#BCCBB8" stroke-width="1.3"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Information the app collects" data-ms="Maklumat yang dikumpul oleh aplikasi">Information the app collects</h2>
+      <p data-en="Geografi collects no personal information. It does not ask for your name, email address, phone number, location, contacts, photos, or any device identifier such as an advertising ID." data-ms="Geografi tidak mengumpul sebarang maklumat peribadi. Aplikasi ini tidak meminta nama, alamat e-mel, nombor telefon, lokasi, senarai kenalan, gambar, atau sebarang pengenal peranti seperti ID pengiklanan.">Geografi collects no personal information. It does not ask for your name, email address, phone number, location, contacts, photos, or any device identifier such as an advertising ID.</p>
+      <p data-en="Because nothing is collected, there is nothing that can be shared, sold, or exposed in a data breach." data-ms="Oleh sebab tiada maklumat dikumpul, tiada apa-apa yang boleh dikongsi, dijual, atau terdedah dalam kebocoran data.">Because nothing is collected, there is nothing that can be shared, sold, or exposed in a data breach.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <circle cx="23" cy="23" r="13" fill="none" stroke="#BCCBB8" stroke-width="1.3"/>
+        <ellipse cx="23" cy="23" rx="5.5" ry="13" fill="none" stroke="#BCCBB8" stroke-width="1.3"/>
+        <path d="M10 23 H36" stroke="#BCCBB8" stroke-width="1.3"/>
+        <path d="M11 11 L35 35" stroke="#0F2233" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="How the app works offline" data-ms="Cara aplikasi berfungsi luar talian">How the app works offline</h2>
+      <p data-en="All learning content ships inside the app package. The app makes no network requests and needs no internet connection. With your device offline or in aeroplane mode, the app behaves exactly the same." data-ms="Semua kandungan pembelajaran disertakan di dalam pakej aplikasi. Aplikasi tidak membuat sebarang permintaan rangkaian dan tidak memerlukan sambungan internet. Walaupun peranti anda luar talian atau dalam mod pesawat, aplikasi berfungsi seperti biasa.">All learning content ships inside the app package. The app makes no network requests and needs no internet connection. With your device offline or in aeroplane mode, the app behaves exactly the same.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <rect x="13" y="21" width="20" height="15" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M17 21 V16 a6 6 0 0 1 12 0 v5" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <circle cx="23" cy="28" r="2" fill="#C9931A"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Permissions" data-ms="Kebenaran aplikasi">Permissions</h2>
+      <p data-en="The app requests no sensitive permissions. In particular, it does not use:" data-ms="Aplikasi tidak meminta sebarang kebenaran sensitif. Khususnya, ia tidak menggunakan:">The app requests no sensitive permissions. In particular, it does not use:</p>
+      <ul>
+        <li data-en="Location services or GPS" data-ms="Perkhidmatan lokasi atau GPS">Location services or GPS</li>
+        <li data-en="Camera or microphone" data-ms="Kamera atau mikrofon">Camera or microphone</li>
+        <li data-en="Contacts, call logs, or SMS" data-ms="Senarai kenalan, log panggilan, atau SMS">Contacts, call logs, or SMS</li>
+        <li data-en="Your photo gallery or personal files" data-ms="Galeri gambar atau fail peribadi anda">Your photo gallery or personal files</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <rect x="15" y="9" width="16" height="28" rx="2.5" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M19 17 H27 M19 22 H27 M19 27 H24" stroke="#BCCBB8" stroke-width="1.6"/>
+        <circle cx="23" cy="33" r="1.4" fill="#C9931A"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Information stored on your device" data-ms="Maklumat yang disimpan dalam peranti anda">Information stored on your device</h2>
+      <p data-en="If you use features such as saved progress, bookmarks, or quiz scores, that information is written to the app's private storage on your own device. It never leaves the device, and the developer has no way to see it." data-ms="Jika anda menggunakan ciri seperti simpanan kemajuan, penanda halaman, atau markah kuiz, maklumat itu ditulis ke storan peribadi aplikasi dalam peranti anda sendiri. Ia tidak pernah keluar dari peranti, dan pembangun tidak mempunyai cara untuk melihatnya.">If you use features such as saved progress, bookmarks, or quiz scores, that information is written to the app's private storage on your own device. It never leaves the device, and the developer has no way to see it.</p>
+      <p data-en="Uninstalling the app deletes this information permanently." data-ms="Menyahpasang aplikasi akan memadamkan maklumat ini secara kekal.">Uninstalling the app deletes this information permanently.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <circle cx="16" cy="23" r="5" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <circle cx="30" cy="23" r="5" fill="none" stroke="#BCCBB8" stroke-width="1.6" stroke-dasharray="3 3"/>
+        <path d="M12 12 L34 34" stroke="#C9931A" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Third-party services" data-ms="Perkhidmatan pihak ketiga">Third-party services</h2>
+      <p data-en="The app contains no advertising networks, no analytics software, and no third-party software development kits. Nothing in the app reports back to the developer or to anyone else." data-ms="Aplikasi ini tiada rangkaian pengiklanan, tiada perisian analitik, dan tiada kit pembangunan perisian (SDK) pihak ketiga. Tiada apa-apa dalam aplikasi yang melaporkan semula kepada pembangun atau kepada sesiapa pun.">The app contains no advertising networks, no analytics software, and no third-party software development kits. Nothing in the app reports back to the developer or to anyone else.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <path d="M23 10 L34 15 V24 c0 7 -5.5 10.5 -11 12.5 C17.5 34.5 12 31 12 24 V15 Z" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M18 23 L21.5 26.5 L28.5 19" fill="none" stroke="#C9931A" stroke-width="1.8"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Children's privacy" data-ms="Privasi kanak-kanak">Children's privacy</h2>
+      <p data-en="The app is made for school students and is safe for children. Since it collects no personal information from anyone, it collects none from children under 13 either. There are no in-app purchases, no chat, no user-generated content, and no links out to other websites." data-ms="Aplikasi ini dibina untuk murid sekolah dan selamat untuk kanak-kanak. Oleh sebab ia tidak mengumpul maklumat peribadi daripada sesiapa, ia juga tidak mengumpul apa-apa daripada kanak-kanak bawah 13 tahun. Tiada pembelian dalam aplikasi, tiada sembang, tiada kandungan yang dijana pengguna, dan tiada pautan ke laman web lain.">The app is made for school students and is safe for children. Since it collects no personal information from anyone, it collects none from children under 13 either. There are no in-app purchases, no chat, no user-generated content, and no links out to other websites.</p>
+    </div>
+  </section>
+
+  <section class="clause">
+    <div class="symbol">
+      <svg width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+        <rect x="3" y="3" width="40" height="40" fill="none" stroke="#D6DED2"/>
+        <path d="M13 20 a10 10 0 1 1 2 8" fill="none" stroke="#0F2233" stroke-width="1.6"/>
+        <path d="M13 13 V21 H21" fill="none" stroke="#C9931A" stroke-width="1.6"/>
+      </svg>
+    </div>
+    <div>
+      <h2 data-en="Changes to this policy" data-ms="Perubahan pada dasar ini">Changes to this policy</h2>
+      <p data-en="If this policy changes, the updated version will be published on this page with a new effective date. Any change that affects how information is handled will be described in plain language." data-ms="Jika dasar ini berubah, versi yang dikemas kini akan diterbitkan di halaman ini dengan tarikh berkuat kuasa yang baharu. Sebarang perubahan yang menjejaskan cara maklumat dikendalikan akan diterangkan dalam bahasa yang mudah.">If this policy changes, the updated version will be published on this page with a new effective date. Any change that affects how information is handled will be described in plain language.</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2 data-en="Contact the developer" data-ms="Hubungi pembangun">Contact the developer</h2>
+    <p data-en="Questions about this policy, or about how the app works, are welcome. Emails are usually answered within a few days." data-ms="Sebarang soalan tentang dasar ini, atau tentang cara aplikasi berfungsi, dialu-alukan. E-mel biasanya dijawab dalam masa beberapa hari.">Questions about this policy, or about how the app works, are welcome. Emails are usually answered within a few days.</p>
+    <a class="mail" href="mailto:kuanmeng.see@gmail.com">kuanmeng.see@gmail.com</a>
+  </section>
+
+  <footer>
+    <span>KUAN MENG SEE / SKM STUDIO</span>
+    <span data-en="GEOGRAFI — OFFLINE STUDY APP" data-ms="GEOGRAFI — APLIKASI PEMBELAJARAN LUAR TALIAN">GEOGRAFI — OFFLINE STUDY APP</span>
+    <span data-en="LAST UPDATED 26 JULY 2026" data-ms="DIKEMAS KINI 26 JULAI 2026">LAST UPDATED 26 JULY 2026</span>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var nodes = document.querySelectorAll('[data-en]');
+    var buttons = document.querySelectorAll('.lang button');
+
+    function setLang(lang) {
+      nodes.forEach(function (node) {
+        var text = node.dataset[lang];
+        if (text) node.textContent = text;
+      });
+      buttons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.lang === lang));
+      });
+      document.documentElement.lang = (lang === 'ms') ? 'ms' : 'en';
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLang(btn.dataset.lang);
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
